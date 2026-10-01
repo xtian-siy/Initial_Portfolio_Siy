@@ -1,0 +1,129 @@
+:root {
+  --paper: #f0efeb;
+  --paper-soft: #e7e5df;
+  --ink: #11110f;
+  --muted: #6e6c66;
+  --line: rgba(17, 17, 15, 0.2);
+  --light-line: rgba(240, 239, 235, 0.24);
+  --page-surround: #d8d6d0;
+  --navbar-surface: rgba(240, 239, 235, 0.9);
+  --shell-line: rgba(17, 17, 15, 0.1);
+  --status-ring: rgba(17, 17, 15, 0.1);
+  --status-ring-fade: rgba(17, 17, 15, 0.03);
+  --inverse-copy: #c3c1ba;
+  --inverse-muted: #aaa8a2;
+  --inverse-hover-muted: #bbb9b2;
+  --portrait-surface: #232320;
+  --portrait-line: rgba(240, 239, 235, 0.18);
+  --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--page-surround);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root[data-theme='dark'] {
+  --paper: #191917;
+  --paper-soft: #292925;
+  --ink: #f0efeb;
+  --muted: #aaa8a2;
+  --line: rgba(240, 239, 235, 0.22);
+  --light-line: rgba(25, 25, 23, 0.23);
+  --page-surround: #10100f;
+  --navbar-surface: rgba(25, 25, 23, 0.92);
+  --shell-line: rgba(240, 239, 235, 0.12);
+  --status-ring: rgba(240, 239, 235, 0.12);
+  --status-ring-fade: rgba(240, 239, 235, 0.04);
+  --inverse-copy: #45443f;
+  --inverse-muted: #66645f;
+  --inverse-hover-muted: #45443f;
+  --portrait-surface: #e4e1d9;
+  --portrait-line: rgba(25, 25, 23, 0.2);
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 74px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 74px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body,
+button,
+a {
+  cursor: default;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+::selection {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
