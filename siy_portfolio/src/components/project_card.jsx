@@ -4,26 +4,24 @@ function ProjectCard({ project, index }) {
       <div className={`project-visual visual-${project.visual}`} aria-hidden="true">
         {project.visual === 'type' && (
           <>
-            <span className="type-a">A</span>
+            <span className="type-a">{project.visualMark}</span>
             <span className="type-slash">/</span>
-            <span className="type-grid">001&nbsp;&nbsp; DIGITAL<br />SYSTEMS &amp; IDENTITY</span>
+            <span className="type-grid">0{index + 1}&nbsp;&nbsp; {project.visualCaption}</span>
           </>
         )}
         {project.visual === 'orb' && (
           <>
             <span className="orb" />
-            <span className="orb-label">Explore<br />the unseen</span>
+            <span className="orb-label">{project.visualCaption}</span>
           </>
         )}
         {project.visual === 'lines' && (
           <>
-            <span className="line-word">FORM</span>
-            <span className="line-caption">Structure in motion</span>
+            <span className="line-word">{project.visualMark}</span>
+            <span className="line-caption">{project.visualCaption}</span>
           </>
         )}
       </div>
-
-
 
       <div className="project-meta">
         <span className="project-number">0{index + 1}</span>
@@ -31,7 +29,23 @@ function ProjectCard({ project, index }) {
           <h3>{project.title}</h3>
           <p>{project.type}</p>
         </div>
-        <span className="project-year">{project.year}</span>
+      </div>
+
+      <div className="project-details">
+        <p>{project.description}</p>
+        <ul className="project-stack" aria-label={`${project.title} technologies`}>
+          {project.stack.map((technology) => <li key={technology}>{technology}</li>)}
+        </ul>
+        {project.href && (
+          <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer">
+            View repository <span aria-hidden="true">↗</span>
+          </a>
+        )}
+        {!project.href && (
+          <a className="project-link" href="#contact">
+            Ask about this project <span aria-hidden="true">↗</span>
+          </a>
+        )}
       </div>
     </article>
   )

@@ -1,3 +1,5 @@
+import portrait from '../assets/CIT09320.jpg'
+
 function About() {
   return (
     <section className="section about-section" id="about">
@@ -8,23 +10,23 @@ function About() {
 
       <div className="about-grid" data-reveal>
         <figure className="about-portrait">
-          <div className="about-portrait-frame" role="img" aria-label="Portrait photo coming soon">
-           <img src="src/assets/CIT09320.jpg" alt="Portrait / Coming soon" width={500} height={500}/>
-           
+          <div className="about-portrait-frame">
+            <img src={portrait} alt="Christian Siy" width={4596} height={2629} loading="lazy" />
           </div>
-          <figcaption>Portrait / Coming soon</figcaption>
+          <figcaption>Portrait / Christian Siy</figcaption>
         </figure>
 
         <div className="about-copy">
           <p>
-            Hi! I’m a developer focused on creating digital products that are clear,
-            considered, and enjoyable to use. I like making complex things feel simple.
+            I’m Christian, a developer based in the Philippines. I build web and
+            mobile experiences for practical needs, from campus commerce to
+            document requests and community websites.
           </p>
           <p>
-            From the first sketch to the final deployment, I work across design and
-            development to keep the experience coherent at every step.
+            I care about clear interfaces, dependable workflows, and code that
+            another person can understand and improve.
           </p>
-          <a className="text-link" href="#contact">More about me <span>↗</span></a>
+          <a className="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
         </div>
       </div>
 

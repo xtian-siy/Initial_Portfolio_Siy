@@ -2,29 +2,26 @@ function Hero() {
   return (
     <section className="hero-section" id="top">
       <div className="hero-kicker" data-reveal>
-        <span>Portfolio / 2026</span>
+        <span>Christian Siy / Software developer</span>
         <span>Based in the Philippines</span>
       </div>
 
       <div className="hero-title-wrap" data-reveal>
-        <p className="hero-role">Full-stack developer<br />&amp; design enthusiast</p>
+        <p className="hero-role">Web, mobile &amp;<br />useful workflows</p>
         <h1>
-          I build digital things<br />
-          that feel <em>obvious.</em>
+          I build software<br />
+          that feels <em>clear.</em>
         </h1>
       </div>
 
       <div className="hero-bottom" data-reveal>
-        <a className="round-link" href="#work" aria-label="Scroll to selected work">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v15M6 13l6 6 6-6" />
-          </svg>
-        </a>
         <p>
-          I turn ideas into thoughtful, reliable experiences—balancing clean code,
-          useful interaction, and a sharp eye for detail.
+          I use React, Node.js, and Flutter to make complex tasks easier to navigate.
         </p>
-        <span className="hero-index">(01—05)</span>
+        <div className="hero-actions">
+          <a className="button-primary" href="#work">View projects <span aria-hidden="true">↗</span></a>
+          <a className="button-secondary" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
   )

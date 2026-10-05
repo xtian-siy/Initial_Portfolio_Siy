@@ -47,12 +47,6 @@
   color-scheme: dark;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 74px;
-}
-
-
 * {
   box-sizing: border-box;
 }
@@ -77,6 +71,22 @@ a {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 8px;
+  left: 8px;
+  padding: 10px 14px;
+  color: var(--paper);
+  background: var(--ink);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 button {
@@ -98,10 +108,10 @@ p {
 
 [data-reveal] {
   opacity: 0;
-  transform: translateY(26px);
+  transform: translateY(10px);
   transition:
-    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
-    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    opacity 0.36s ease-out,
+    transform 0.36s ease-out;
 }
 
 [data-reveal].is-visible {

@@ -4,7 +4,7 @@ import logo from '../assets/XtianSiyLogo.png'
 const links = [
   ['Work', '#work'],
   ['About', '#about'],
-  ['Experience', '#experience'],
+  ['Skills', '#skills'],
   ['Contact', '#contact'],
 ]
 
@@ -38,9 +38,8 @@ function Navbar() {
       </a>
 
       <nav id="primary-navigation" className={isOpen ? 'nav-links is-open' : 'nav-links'}>
-        {links.map(([label, href], index) => (
+        {links.map(([label, href]) => (
           <a href={href} key={href} onClick={closeMenu}>
-            <span>0{index + 1}</span>
             {label}
           </a>
         ))}

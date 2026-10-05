@@ -1,17 +1,27 @@
-import SkillCard from '../components/skill_card.jsx'
-
-const skills = ['Artificial Intelligence','React', 'JavaScript', 'Node.js', 'UI / UX', 'APIs', 'Databases', 'Git', 'Next.js', 'Tailwind CSS', 'Figma']
+const skillGroups = [
+  { name: 'Frontend', skills: ['React', 'JavaScript', 'CSS', 'Responsive design'] },
+  { name: 'Backend & data', skills: ['Node.js', 'Express', 'REST APIs', 'MongoDB'] },
+  { name: 'Mobile & tools', skills: ['Flutter', 'Firebase', 'Git'] },
+]
 
 function Skills() {
   return (
-    <section className="section skills-section">
+    <section className="section skills-section" id="skills">
       <div className="section-heading" data-reveal>
-        <span className="section-number">04</span>
-        <h2>Tools &amp; capabilities</h2>
+        <span className="section-number">03</span>
+        <h2>Skills &amp; tools</h2>
+        <p>Technologies I use across web and mobile projects.</p>
       </div>
 
-      <div className="skills-grid" data-reveal>
-        {skills.map((skill, index) => <SkillCard key={skill} name={skill} index={index} />)}
+      <div className="skill-groups" data-reveal>
+        {skillGroups.map((group) => (
+          <div className="skill-group" key={group.name}>
+            <h3>{group.name}</h3>
+            <ul>
+              {group.skills.map((skill) => <li key={skill}>{skill}</li>)}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   )
