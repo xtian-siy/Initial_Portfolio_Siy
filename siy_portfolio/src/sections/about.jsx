@@ -1,14 +1,14 @@
+import Arrow from '../components/arrow.jsx'
 import portrait from '../assets/CIT09320.jpg'
 
 function About() {
   return (
     <section className="section about-section" id="about">
-      <div className="section-heading" data-reveal>
-        <span className="section-number">02</span>
+      <div className="section-heading">
         <h2>About</h2>
       </div>
 
-      <div className="about-grid" data-reveal>
+      <div className="about-grid">
         <figure className="about-portrait">
           <div className="about-portrait-frame">
             <img src={portrait} alt="Christian Siy" width={4596} height={2629} loading="lazy" />
@@ -26,7 +26,7 @@ function About() {
             I care about clear interfaces, dependable workflows, and code that
             another person can understand and improve.
           </p>
-          <a className="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+          <a className="text-link" href="#contact">Get in touch <Arrow /></a>
         </div>
       </div>
 

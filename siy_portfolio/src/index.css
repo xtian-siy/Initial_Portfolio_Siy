@@ -1,3 +1,5 @@
+@import './fonts.css';
+
 :root {
   --paper: #f0efeb;
   --paper-soft: #e7e5df;
@@ -15,8 +17,10 @@
   --inverse-hover-muted: #bbb9b2;
   --portrait-surface: #232320;
   --portrait-line: rgba(240, 239, 235, 0.18);
-  --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: 'Newsreader', Iowan Old Style, Baskerville, serif;
+  --sans: 'Manrope', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --accent: #5b6656;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-family: var(--sans);
   color: var(--ink);
@@ -44,6 +48,7 @@
   --inverse-hover-muted: #45443f;
   --portrait-surface: #e4e1d9;
   --portrait-line: rgba(25, 25, 23, 0.2);
+  --accent: #b9c5ae;
   color-scheme: dark;
 }
 
@@ -106,21 +111,10 @@ p {
   background: var(--ink);
 }
 
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(10px);
-  transition:
-    opacity 0.36s ease-out,
-    transform 0.36s ease-out;
-}
-
-[data-reveal].is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+[data-reveal] { opacity: 1; }
 
 :focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -137,3 +131,8 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+html { scrollbar-color: var(--muted) var(--paper); scrollbar-width: thin; }
+body { caret-color: var(--accent); }
+h1, h2, h3 { text-wrap: balance; }
+a { text-underline-offset: 5px; }

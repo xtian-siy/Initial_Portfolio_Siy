@@ -7,13 +7,12 @@ const skillGroups = [
 function Skills() {
   return (
     <section className="section skills-section" id="skills">
-      <div className="section-heading" data-reveal>
-        <span className="section-number">03</span>
+      <div className="section-heading">
         <h2>Skills &amp; tools</h2>
         <p>Technologies I use across web and mobile projects.</p>
       </div>
 
-      <div className="skill-groups" data-reveal>
+      <div className="skill-groups">
         {skillGroups.map((group) => (
           <div className="skill-group" key={group.name}>
             <h3>{group.name}</h3>

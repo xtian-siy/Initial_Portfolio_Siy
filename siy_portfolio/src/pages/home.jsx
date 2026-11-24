@@ -3,6 +3,7 @@ import Hero from "../components/hero.jsx";
 import Projects from "../sections/projects.jsx";
 import About from "../sections/about.jsx";
 import Skills from "../sections/skills.jsx";
+import Certifications from "../sections/certifications.jsx";
 import Contact from "../sections/contact.jsx";
 import Footer from "../components/footer.jsx";
 
@@ -16,6 +17,7 @@ function Home() {
         <Projects />
         <About />
         <Skills />
+        <Certifications />
         <Contact />
       </main>
       <Footer />
